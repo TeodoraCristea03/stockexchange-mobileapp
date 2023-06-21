@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BursaDeValori.DespreAplicatiePage"
+             Title="Despre Aplicatie">
+    <ScrollView>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="300" />
+            </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Label 
+            Grid.ColumnSpan="3"
+            Text="Ce face aplicatia?"
+            TextColor="#71858D"
+            FontAttributes="Bold"
+            FontSize="Large"
+            FontFamily="Book Antiqua"
+            HorizontalOptions="Center" 
+            VerticalOptions="Center" />
+
+        <Label 
+            Margin="15,0,15,0"
+            Grid.Row="1"
+            Grid.ColumnSpan="3"
+            Text="Aceasta aplicație monitorizează in timp real valorile la bursă pentru diverse firme. Informațiile sunt extrase de pe Yahoo Finance, iar firmele au fost alese de noi aleator."
+            TextColor="#71858D"
+            FontSize="Small"
+            FontFamily="Book Antiqua"
+            HorizontalOptions="Start" />
+
+
+        <Label
+            Margin="15,0,15,0"
+            Grid.Row="2"
+            Grid.ColumnSpan="3"
+            TextColor="#71858D"
+            FontSize="Small"
+            FontFamily="Book Antiqua"
+            Text="Descrierea Paginilor:"/>
+
+        <Label
+            Margin="15,0,15,0"
+            Grid.Row="3"
+            Grid.Column="0"
+            Grid.ColumnSpan="1"
+            TextColor="#71858D"
+            FontSize="12"
+            FontFamily="Book Antiqua"
+            Text="Analiza Financiară"/>
+
+        <Label
+            Grid.Row="3"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            TextColor="#71858D"
+            FontSize="Micro"
+            FontFamily="Book Antiqua"
+            Text="Această pagină conține un grafic de tip bar cu informații despre Regular Market Price (prețul care prevalează într-o anumită zi sau într-o anumită oră, fiind rezultatul cererii și ofertei pieței.) pentru toate companiile."/>
+
+        <Label
+            Margin="15,0,15,0"
+            Grid.Row="4"
+            Grid.Column="0"
+            Grid.ColumnSpan="1"
+            TextColor="#71858D"
+            FontSize="12"
+            FontFamily="Book Antiqua"
+            Text="Analiza Statistică"/>
+
+        <Label
+            Grid.Row="4"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            TextColor="#71858D"
+            FontSize="Micro"
+            FontFamily="Book Antiqua"
+            Text="Și în această pagină regăsim informații cu privire la Regular Market Price. Am analizat informațiile primite de pe Yahoo Finance si ne-am creat 6 categorii. Pentru fiecare categorie în parte am calculat frecvența și am notat cate companii se află în fiecare din cele 6 categorii."/>
+
+        <Label
+            Margin="15,0,15,0"
+            Grid.Row="5"
+            Grid.Column="0"
+            Grid.ColumnSpan="1"
+            TextColor="#71858D"
+            FontSize="12"
+            FontFamily="Book Antiqua"
+            Text="Analiza Comparativă"/>
+
+        <Label
+            Grid.Row="5"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            TextColor="#71858D"
+            FontSize="Micro"
+            FontFamily="Book Antiqua"
+            Text="În această pagină am vrut să oferim utilizatorului posibilitatea de a compara două firme care l-ar putea interesa. Astfel, utilizatorul poate alege din cele doua controale de tip picker companiile care îl interesează și dupa apăsarea butonului, cele două tabele conținând diverși indicatori financiari, se vor actualiza, oferind astfel o modalitate ușoară de a compara două firme."/>
+
+          
+        <Grid ColumnDefinitions="*,*" Padding="8" Grid.Row="6"
+             Grid.ColumnSpan="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label
+                VerticalOptions="Center"
+                Grid.Row="0" Grid.Column="0"
+                FontFamily="Book Antiqua"
+                TextColor="#71858D"
+                Text="Nume:"/>
+                <Entry
+                x:Name="EntryNume"
+                VerticalOptions="Center"
+                Grid.Row="0" Grid.Column="1"
+                Text=""/>
+                <Label
+                VerticalOptions="Center"
+                FontFamily="Book Antiqua"
+                TextColor="#71858D"
+                Grid.Row="1" Grid.Column="0"
+                Text="Prenume:"/>
+                <Entry
+                x:Name="EntryPrenume"
+                VerticalOptions="Center"
+                Grid.Row="1" Grid.Column="1"
+                Text=""/>
+                <Label
+                VerticalOptions="Center"
+                FontFamily="Book Antiqua"
+                TextColor="#71858D"
+                Grid.Row="2" Grid.Column="0"
+                Text="Data nasterii:"/>
+                <DatePicker
+                x:Name="DataNastere"
+                VerticalOptions="Center"
+                Grid.Row="2" Grid.Column="1"/>
+                <Label
+                x:Name="LabelNota"
+                VerticalOptions="Center"
+                FontFamily="Book Antiqua"
+                TextColor="#71858D"
+                Grid.Row="3" Grid.Column="0"
+                Text="Oferă o nota paginii ():"/>
+                <Slider
+                x:Name="NotaApp"
+                Minimum="0"
+                Maximum="10"
+                VerticalOptions="Center"
+                Grid.Row="3" Grid.Column="1"
+                ValueChanged="OnSliderValueChanged"/>
+                <Label
+                FontFamily="Book Antiqua"
+                TextColor="#71858D"
+                VerticalOptions="Center"
+                Grid.Row="4" Grid.Column="0"
+                Text="Ce alte companii ai dori sa regasesti?"/>
+                <Entry
+                x:Name="EntryExtraComp"
+                VerticalOptions="Center"
+                Grid.Row="4" Grid.Column="1"
+                Text=""/>
+                <Button
+                VerticalOptions="Center"
+                Clicked="OnSubmitClicked"
+                Grid.Row="5" Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Text="Submit"/>
+
+        </Grid>
+
+    </Grid>
+        
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="BursaDeValori.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:BursaDeValori">
+
+    <FlyoutItem Title="Bursa de valori">
+        <ShellContent
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Analiza financiara">
+        <ShellContent
+        ContentTemplate="{DataTemplate local:AnalizaFinanciaraPage}"
+        Route="AnalizaFinanciaraPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Analiza statistica">
+        <ShellContent
+        ContentTemplate="{DataTemplate local:AnalizaStatisticaPage}"
+        Route="AnalizaStatisticaPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Analiza comparativa">
+        <ShellContent
+        ContentTemplate="{DataTemplate local:AnalizaComparativaPage}"
+        Route="AnalizaComparativaPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Despre aplicatie">
+        <ShellContent
+        ContentTemplate="{DataTemplate local:DespreAplicatiePage}"
+        Route="DespreAplicatiePage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Despre bursa">
+        <ShellContent
+        ContentTemplate="{DataTemplate local:DespreBursaPage}"
+        Route="DespreBursaPage" />
+    </FlyoutItem>
+
+</Shell>

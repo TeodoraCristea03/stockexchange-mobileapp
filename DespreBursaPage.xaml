@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BursaDeValori.DespreBursaPage"
+             Title="Despre Bursa">
+
+    <Grid Padding="8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2.5*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+
+
+
+        <Label 
+            Grid.ColumnSpan="2"
+            Text="Ce este bursa de valori?"
+            TextColor="#71858D"
+            FontAttributes="Bold"
+            FontSize="Large"
+            FontFamily="Book Antiqua"
+            HorizontalOptions="Center" 
+            VerticalOptions="Center" 
+            Margin="15,0,15,0"/>
+
+
+
+        <Label 
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            Text="Bursa de valori este o piață de capital organizată în care acțiunile companiilor private și publice sunt tranzacționate conform unei legi speciale, iar pe de altă parte este un loc de colectare a economiilor și lichidităților sectorului privat pentru proiecte de investiții pe termen lung și este o referință pentru ca oamenii să-și strângă fondurile excedentare."
+            TextColor="#71858D"
+            FontSize="12"
+            FontFamily="Book Antiqua"
+            HorizontalOptions="Start"
+            Margin="20,0,20,0"/>
+
+
+
+
+
+        <Label
+            Grid.Row="2"
+            Grid.ColumnSpan="2"
+            TextColor="#71858D"
+            FontSize="12"
+            FontFamily="Book Antiqua"
+            Text="Acțiunile sunt titluri de capital emise de societățile comerciale. O acțiune reprezintă o parte din capitalul unei societăți, divizat în părţi egale. Din punct de vedere juridic, o actiune reprezinta dreptul de proprietate al posesorului acesteia asupra unei cote-parti din societatea comerciala. Din punctul de vedere al pietei de capital, actiunile sunt instrumente financiare pe care investitorii le pot cumpara sau vinde în cadrul unei piete organizate si reglementate, mai exact al Bursei de Valori."
+            Margin="20,0,20,0"
+            />
+
+        <Image
+            Grid.Row="3"
+            Grid.Column="0"
+            Source="test.jfif"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"/>
+
+        <Label
+            Grid.Row="3"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            TextColor="#71858D"
+            FontSize="12"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            FontFamily="Book Antiqua"
+            Text="În România, singura institutie unde se pot tranzactiona actiuni este Bursa de Valori Bucuresti (BVB), primele tranzactii de dupa 1990 având loc aici în anul 1995. Pentru ca actiunile emise de o companie sa fie admise la tranzactionare la una din categoriile bursei, respectiva companie trebuie sa îndeplineasca o serie de criterii, dintre care cele mai importante tin de profitabilitate, de dimensiuni  si de transparenta. Ulterior, dupa admiterea la tranzactionare, fiecare dintre emitenti trebuie sa continue sa îndeplineasca acele criterii, în caz contrar putând fi delistati. Nu in ultimul rand, trebuie precizat ca in Romania nu se pot tranzactiona decat actiuni ordinare. Pe pietele mai dezvoltate din vestul Europei si din Statele Unite exista posibilitatea de a tranzactiona si actiuni preferentiale prin intermediul bursei. "
+            Margin="20,0,20,0"
+            />
+
+
+        <Label
+            Grid.Row="4"
+            Grid.ColumnSpan="2"
+            TextColor="#71858D"
+            FontFamily="Book Antiqua"
+            Text="Pentru mai multe detalii, puteti consulta link-ul: https://bvb.ro/"
+            FontSize="Caption"/>
+
+
+    </Grid>
+
+
+
+
+</ContentPage>

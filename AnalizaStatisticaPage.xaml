@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BursaDeValori.AnalizaStatisticaPage"
+             xmlns:chart="clr-namespace:BursaDeValori"
+             Title="Analiza Statistica">
+
+    <StackLayout VerticalOptions="CenterAndExpand" Spacing="25" Margin="20">
+
+        <Border 
+            StrokeThickness="4"
+            StrokeShape="RoundRectangle 30,30,30,30"
+            Background="#2B0B98"
+            Padding="16,5"
+            HorizontalOptions="Center"
+            Margin="20">
+            <Label 
+                Text="Donut chart pretul actiunilor pe categorii"
+                Padding="5"
+                FontSize="15"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontFamily="ComicSans"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+        </Border>
+
+        <chart:ChartView x:Name="chartView" VerticalOptions="FillAndExpand"/>
+
+        <Border 
+            StrokeThickness="4"
+            StrokeShape="RoundRectangle 30,30,30,30"
+            Background="#2B0B98"
+            Padding="16,5"
+            HorizontalOptions="Center"
+            Margin="20">
+            <Label 
+                Text="Radial chart volumul actiunilor tranzactionate"
+                FontSize="15"
+                Padding="5"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontFamily="ComicSans"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+        </Border>
+
+        <chart:ChartView x:Name="chartView1" VerticalOptions="FillAndExpand" />
+    </StackLayout>
+</ContentPage>

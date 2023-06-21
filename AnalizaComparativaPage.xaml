@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BursaDeValori.AnalizaComparativaPage"
+             Title="Analiza Comparativa">
+    <Border 
+            StrokeShape="RoundRectangle 30,30,30,30"
+            Padding="16,5"
+            HorizontalOptions="Center">
+        <StackLayout
+            Spacing="25"
+            Padding="30,30"
+            VerticalOptions="Center"
+            BackgroundColor="AliceBlue">
+
+            <Grid ColumnDefinitions="4*,*,4*">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="500"/>
+                </Grid.RowDefinitions>
+
+                <Border 
+                StrokeShape="RoundRectangle 30,30,30,30"
+                Background="#2B0B98"
+                Padding="16,5"
+                HorizontalOptions="Center"
+                Grid.Row="0" Grid.Column="0"
+                Grid.ColumnSpan="3">
+                    <Label 
+                    Text="Compara doua companii"
+                    Padding="5"
+                    FontSize="20"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    FontFamily="ComicSans"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+                </Border>
+
+
+                <Picker 
+            x:Name="pickerComp1"
+            SelectedItem="{Binding Companie1}"
+            Grid.Row="1" Grid.Column="0"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"/>
+
+                <Picker 
+            x:Name="pickerComp2"
+            SelectedItem="{Binding Companie2}"
+            Grid.Row="1" Grid.Column="2"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"/>
+
+                <Button 
+            Text="Compara"
+            Grid.Row="2" Grid.Column="0"
+            Grid.ColumnSpan="3"
+            VerticalOptions="Center"
+            Clicked="OnButtonClicked"
+           />
+
+
+            <Grid x:Name="TableViewComp1"  Grid.Row="3" Grid.Column="0">
+                    <Grid RowDefinitions="*,100,*,*,*,*,*,*" ColumnDefinitions="60,*">
+                    <Label
+                            Text="Simbol"
+                            Grid.Row="0" Grid.Column="0"/>
+                    <Label x:Name="SymbolLabel1"
+                            Grid.Row="0" Grid.Column="1"/>
+                    <Label 
+                            Text="Nume"
+                            Grid.Row="1" Grid.Column="0"/>
+                    <Label x:Name="NameLabel1"
+                            Grid.Row="1" Grid.Column="1"/>
+                    <Label 
+                            Text="Volum tranzactionat"
+                            Grid.Row="2" Grid.Column="0"/>
+                    <Label x:Name="RMVLabel1"
+                            Grid.Row="2" Grid.Column="1"/>
+                    <Label 
+                            Text="Pretul actiunii"
+                            Grid.Row="3" Grid.Column="0"/>
+                    <Label x:Name="RMPLabel1"
+                            Grid.Row="3" Grid.Column="1"/>
+                    <Label 
+                            Text="Pretul minim (zi)"
+                            Grid.Row="4" Grid.Column="0"/>
+                    <Label x:Name="RMPLowLabel1"
+                            Grid.Row="4" Grid.Column="1"/>
+                    <Label 
+                            Text="Pretul maxim (zi)"
+                            Grid.Row="5" Grid.Column="0"/>
+                    <Label x:Name="RMPHighLabel1"
+                            Grid.Row="5" Grid.Column="1"/>
+                    <Label 
+                            Text="Volum mediu 10 zile"
+                            Grid.Row="6" Grid.Column="0"/>
+                    <Label x:Name="ADV10DLabel1"
+                            Grid.Row="6" Grid.Column="1"/>
+                    <Label 
+                            Text="Volum mediu 3 luni"
+                            Grid.Row="7" Grid.Column="0"/>
+                    <Label x:Name="ADV3MLabel1"
+                            Grid.Row="7" Grid.Column="1"/>
+                </Grid>
+            </Grid>
+
+            <Grid x:Name="TableViewComp"  Grid.Row="3" Grid.Column="1">
+                    <Grid RowDefinitions="*,100,*,*,*,*,*,*" ColumnDefinitions="10">
+                    <Label 
+                            Grid.Row="0"/>
+                    <Label
+                            Grid.Row="1"/>
+                    <Label x:Name="CompVol"
+                            HorizontalOptions="Center"
+                            Grid.Row="2"/>
+                    <Label x:Name="CompPret"
+                            HorizontalOptions="Center"                                
+                            Grid.Row="3"/>
+                    <Label x:Name="CompPretMin"
+                            HorizontalOptions="Center"                                       
+                            Grid.Row="4"/>
+                    <Label x:Name="CompPretMax"
+                            HorizontalOptions="Center"                                       
+                            Grid.Row="5"/>
+                    <Label x:Name="CompVol10Z"
+                            HorizontalOptions="Center"                                       
+                            Grid.Row="6"/>
+                    <Label x:Name="CompVol3L"
+                            HorizontalOptions="Center"                                       
+                            Grid.Row="7"/>
+                </Grid>
+            </Grid>
+
+            <Grid x:Name="TableViewComp2"  Grid.Row="3" Grid.Column="3">
+                    <Grid RowDefinitions="*,100,*,*,*,*,*,*" ColumnDefinitions="60,*">
+                    <Label
+                            Text="Simbol"
+                            Grid.Row="0" Grid.Column="0"/>
+                    <Label x:Name="SymbolLabel2"
+                            Grid.Row="0" Grid.Column="1"/>
+                    <Label 
+                            Text="Nume"
+                            Grid.Row="1" Grid.Column="0"/>
+                    <Label x:Name="NameLabel2"
+                            Grid.Row="1" Grid.Column="1"/>
+                    <Label 
+                            Text="Volum tranzactionat"
+                            Grid.Row="2" Grid.Column="0"/>
+                    <Label x:Name="RMVLabel2"
+                            Grid.Row="2" Grid.Column="1"/>
+                    <Label 
+                            Text="Pretul actiunii"
+                            Grid.Row="3" Grid.Column="0"/>
+                    <Label x:Name="RMPLabel2"
+                            Grid.Row="3" Grid.Column="1"/>
+                    <Label 
+                            Text="Pretul minim (zi)"
+                            Grid.Row="4" Grid.Column="0"/>
+                    <Label x:Name="RMPLowLabel2"
+                            Grid.Row="4" Grid.Column="1"/>
+                    <Label 
+                            Text="Pretul maxim (zi)"
+                            Grid.Row="5" Grid.Column="0"/>
+                    <Label x:Name="RMPHighLabel2"
+                            Grid.Row="5" Grid.Column="1"/>
+                    <Label 
+                            Text="Volum mediu 10 zile"
+                            Grid.Row="6" Grid.Column="0"/>
+                    <Label x:Name="ADV10DLabel2"
+                            Grid.Row="6" Grid.Column="1"/>
+                    <Label 
+                            Text="Volum mediu 3 luni"
+                            Grid.Row="7" Grid.Column="0"/>
+                    <Label x:Name="ADV3MLabel2"
+                            Grid.Row="7" Grid.Column="1"/>
+                </Grid>
+            </Grid>
+        </Grid>
+
+
+        </StackLayout>
+    </Border>
+
+</ContentPage>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BursaDeValori.AnalizaFinanciaraPage"
+             xmlns:chart="clr-namespace:BursaDeValori"
+             Title="Analiza Financiara">
+    <StackLayout VerticalOptions="CenterAndExpand" Spacing="25" Margin="20">
+
+        <Border 
+            StrokeThickness="4"
+            StrokeShape="RoundRectangle 30,30,30,30"
+            Background="#2B0B98"
+            Padding="16,5"
+            HorizontalOptions="Center"
+            Margin="10">
+            <Grid ColumnDefinitions="130,80,150" Margin="90,0,90,0" HorizontalOptions="Center">
+                <Label
+                Margin="0,10,0,0"
+                HorizontalOptions="Center"
+                Text="Top 15 companii"
+                TextColor="White"
+                FontAttributes="Bold"
+                Grid.Row="0" Grid.Column="0"
+                />
+                <Switch
+                x:Name="Switch"
+                HorizontalOptions="Center"
+                Toggled="OnToggled" 
+                Grid.Row="0" Grid.Column="1"
+                />
+                <Label
+                Margin="0,10,0,0"
+                TextColor="White"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                Text="Ultimele 15 companii"
+                Grid.Row="0" Grid.Column="2"
+                />
+            </Grid>
+        </Border>
+
+        <Border 
+            x:Name="Border1"
+            StrokeThickness="4"
+            IsVisible="False"
+            StrokeShape="RoundRectangle 30,30,30,30"
+            Background="#2B0B98"
+            Padding="16,5"
+            HorizontalOptions="Center"
+            Margin="20">
+            <Label 
+                x:Name="TextChart1"
+                IsVisible="False"
+                Padding="5"
+                FontSize="15"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontFamily="ComicSans"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+        </Border>
+        <chart:ChartView x:Name="chartView" VerticalOptions="FillAndExpand" />
+        <Border 
+            x:Name="Border2"
+            IsVisible="False"
+            StrokeThickness="4"
+            StrokeShape="RoundRectangle 30,30,30,30"
+            Background="#2B0B98"
+            Padding="16,5"
+            HorizontalOptions="Center"
+            Margin="20">
+            <Label 
+                x:Name="TextChart2"
+                IsVisible="False"
+                Padding="5"
+                FontSize="15"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontFamily="ComicSans"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+        </Border>
+        <chart:ChartView x:Name="chartView1" VerticalOptions="FillAndExpand" />
+    </StackLayout>
+</ContentPage>

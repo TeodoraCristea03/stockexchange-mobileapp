@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BursaDeValori.MainPage"
+             Title="Pagina Principala">
+
+    <StackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+        <Border 
+            StrokeThickness="4"
+            StrokeShape="RoundRectangle 30,30,30,30"
+            Background="#2B0B98"
+            Padding="16,5"
+            HorizontalOptions="Center"
+            Margin="20">
+            <Label 
+                Text="Bursa de valori in timp real"
+                Padding="5"
+                FontSize="32"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontFamily="ComicSans"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+        </Border>
+
+        <ListView
+            x:Name="listViewBursa"
+            ItemSelected="listViewBursa_ItemSelected"
+            HorizontalOptions="Center" 
+            BackgroundColor ="Beige"
+            RowHeight="80"
+            >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <HorizontalStackLayout Padding="5" VerticalOptions="Start" HorizontalOptions="Start" >
+                            <Label Text="{Binding Symbol}" VerticalOptions="Center" Padding="5" />
+                            <Label Text=" - " VerticalOptions="Center" />
+                            <Label Text="{Binding ShortName}" VerticalOptions="Center" Padding="10"/>
+                            <Label Text=" - " VerticalOptions="Center" />
+                            <Label Text="{Binding RegularMarketPrice}" VerticalOptions="Center" Padding="8"/>
+                            <Label Text=" - " VerticalOptions="Center" />
+                            <Label Text="{Binding RegularMarketVolume}" VerticalOptions="Center" Padding="10"/>
+                        </HorizontalStackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+    </StackLayout>
+
+</ContentPage>
